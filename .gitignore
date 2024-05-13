@@ -1,0 +1,5 @@
+# Dependency directories
+node_modules/
+
+# MacOS .DS_Store file
+**/.DS_Store

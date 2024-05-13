@@ -1,0 +1,23 @@
+{
+  "name": "easy-backend",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "packageManager": "pnpm@9.1.1",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "dev:serve": "pnpm -F mobile start:dev",
+    "build:serve": "pnpm -F mobile build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "picocolors": "^1.0.0",
+    "simple-git-hooks": "^2.11.1",
+    "tsx": "^4.10.1",
+    "typescript": "^5.4.5"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx tsx ./scripts/verify-commit.ts"
+  }
+}
