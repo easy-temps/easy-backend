@@ -2,9 +2,7 @@
   "name": "mobile",
   "version": "0.0.1",
   "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "dev": "nest start --watch",
     "build": "nest build",
