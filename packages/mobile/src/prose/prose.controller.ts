@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('/project')
+@Controller('/prose')
 export class ProseController {
-  @Get('/prose')
+  @Get()
   public async getStr() {
     const proses = [
       {
