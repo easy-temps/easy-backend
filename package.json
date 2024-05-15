@@ -5,13 +5,16 @@
   "description": "",
   "packageManager": "pnpm@9.1.1",
   "scripts": {
-    "dev": "pnpm -F mobile dev",
+    "dev:serve": "pnpm -F mobile dev",
     "build:serve": "pnpm -F mobile build",
     "preinstall": "npx -y only-allow pnpm",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "npx simple-git-hooks",
+    "format": "prettier --write --cache .",
+    "format-check": "prettier --check --cache ."
   },
   "license": "MIT",
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/node": "^20.12.11",
     "picocolors": "^1.0.0",
     "simple-git-hooks": "^2.11.1",
