@@ -1,5 +1,8 @@
 services:
   easyapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: easy-backend:1.0.0
     container_name: easyapi
     ports:
