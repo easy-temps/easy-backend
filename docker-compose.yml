@@ -1,0 +1,14 @@
+services:
+  easyapi:
+    image: easy-backend:1.0.0
+    container_name: easyapi
+    ports:
+      - "3012:3012"
+    networks:
+      - easyapi_network
+    restart: unless-stopped
+
+networks:
+  easyapi_network:
+    driver: bridge
+    name: easyapi_network
