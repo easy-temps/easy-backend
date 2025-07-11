@@ -12,10 +12,21 @@ describe('AppController (e2e)', () => {
     }).compile();
 
     app = moduleFixture.createNestApplication();
+    app.setGlobalPrefix('api');
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer()).get('/').expect(200).expect('Hello World!');
+  it('/api/prose (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/api/prose')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveProperty('message', 'success');
+        expect(res.body).toHaveProperty('timestamp');
+        expect(res.body).toHaveProperty('result');
+        expect(res.body).toHaveProperty('code', 0);
+        expect(typeof res.body.result).toBe('string');
+        expect(res.body.result).toMatch(/^🔖/);
+      });
   });
 });
